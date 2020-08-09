@@ -1,0 +1,35 @@
+yarn init -y
+// criar uma pasta src/
+// criar um arquivo src/server.ts
+
+// instalar o typescript como dependencia
+yarn add typescript -D
+
+// instalar o arquivo de configuração do typescript
+yarn  tsc --init
+
+// no tsconfig mudar "target" => "es2017"
+
+// adicionar o ts-node-dev como dependencia
+yarn add ts-node-dev -D //mesmo que o nodemon
+
+// no package.json criar o scripts
+"sripts":{
+    "start":"ts-node-dev  src/server.ts"
+}
+/*No "script" adiciona o seguintes codigos
+* --transpiler-only
+* Para ignorar os arquivos node_modules 
+--ignore-watch node_modules 
+*para ficar atualizando quando houver alteração
+--respawn
+*/
+
+//instalar o gerenciador de rotas
+yarn add express
+&&
+yarn add @types/express -D
+
+
+
+
